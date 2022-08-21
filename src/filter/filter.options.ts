@@ -32,7 +32,7 @@ export class FilterOptions {
   }
 
   public static async getOptions(data: Partial<FilterOptions>) {
-    if (data.dateFrom <= data.dateTo) {
+    if (data.dateFrom > data.dateTo) {
       const t = data.dateFrom;
       data.dateFrom = data.dateTo;
       data.dateTo = t;
